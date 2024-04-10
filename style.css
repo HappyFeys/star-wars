@@ -22,7 +22,7 @@ h1{
     color: #097387;
     font-size: 75px;
     animation-name: intro;
-    animation-duration: 300s;
+    animation-duration: 600s;
     animation-delay: 2s;
     animation-iteration-count: 1;
     
@@ -30,7 +30,7 @@ h1{
 
 @keyframes intro {
     0% {opacity: 100%;}
-    1% {opacity: 0%;}
+    0.5% {opacity: 0%;}
 }
 
 @font-face {
@@ -60,20 +60,18 @@ div{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    /* top: 100vh; */
     font-family: 'starwars';    
     animation-name: scrollText;
     animation-duration: 60s;
-    transform: translateY(200vh);
-    perspective: 2000px;
-    perspective-origin: 50% 50%;
-    transform-style: preserve-3d;
+    animation-timing-function: linear;
 }
 
 @keyframes scrollText {
-    from { transform: translateY(100vh,); }
-    to {transform: translateY(-200vh);}
-}
+    0% { transform : perspective(600px) rotateX(70deg) translateY(67%);opacity: 1; }
+    50% {opacity: 1;}
+    100% {transform : perspective(600px) rotateX(70deg) translateY(-650vh); opacity: 0;}
+} 
+
 
 p{
     color: #FFBC03;
