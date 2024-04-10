@@ -14,6 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 
 h1{
@@ -59,21 +60,24 @@ div{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 100vh;
+    /* top: 100vh; */
     font-family: 'starwars';    
     animation-name: scrollText;
-    /* animation-delay: 5s; */
     animation-duration: 60s;
+    transform: translateY(200vh);
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
 }
 
 @keyframes scrollText {
-    from {top:100vh}
-    to {top:-200vh}
+    from { transform: translateY(100vh,); }
+    to {transform: translateY(-200vh);}
 }
 
 p{
     color: #FFBC03;
     font-size: 80px;
-    transform: rotateX(75deg);
+    transform: rotateX(50deg);
     font-weight: 900;
 }
