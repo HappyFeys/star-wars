@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/assets/pexels-kai-pilger-1341279.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    width: 75%;
+    color: #097387;
+    font-size: 75px;
+    animation-name: intro;
+    animation-duration: 300s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    
+}
+
+@keyframes intro {
+    0% {opacity: 100%;}
+    1% {opacity: 0%;}
+}
+
+@font-face {
+	font-family: 'starwars';
+	src: url(‘/font/star-jedi-font/StarJedi-DGRW.ttf) format('truetype')		
+}
+
+img{
+    position: absolute;
+    animation-name: logo;
+    animation-delay: 5s;
+    animation-duration: 10s;
+    opacity: 0;
+}
+
+@keyframes logo {
+    0% {opacity: 0;}
+    10% {opacity: 100%; transform: scale(2);}
+    
+    75% {transform: scale(0.5);}
+}
+
+div{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100vh;
+    font-family: 'starwars';    
+    animation-name: scrollText;
+    /* animation-delay: 5s; */
+    animation-duration: 60s;
+}
+
+@keyframes scrollText {
+    from {top:100vh}
+    to {top:-200vh}
+}
+
+p{
+    color: #FFBC03;
+    font-size: 80px;
+    transform: rotateX(75deg);
+    font-weight: 900;
+}
